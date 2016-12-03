@@ -16,7 +16,7 @@ server.on('message', function (message, remote) {
     else if (buf[0] == null) {
 	console.log('buf[0] == 0');
 	buf[0] = {port: remote.port, adress: remote.address};
-	server.send(JSON.stringify(buf[0]), PORT, ADRESS);
+	server.send(JSON.stringify(JSON.stringify(buf[0])), buf[0].port, buf[0].adress);
     }
     else {
         console.log('buf[1] == 0');
@@ -27,4 +27,6 @@ server.on('message', function (message, remote) {
     }
     
 });
+console.log(PORT);
+console.log(HOST);
 server.bind(PORT, HOST);
