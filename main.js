@@ -22,7 +22,8 @@ server.on('message', function (message, remote) {
         console.log('buf[1] == 0');
         buf[1] = {port: remote.port, adress: remote.address};
 	server.send(JSON.stringify(buf[0]), buf[1].port, buf[1].adress);
-	server.send(JSON.stringify(buf[1]), buf[0].port, buf[0].adress)
+	server.send(JSON.stringify(buf[1]), buf[0].port, buf[0].adress);
+	buf = [null, null];
     }
     
 });
