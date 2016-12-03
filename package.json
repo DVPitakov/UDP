@@ -1,0 +1,20 @@
+{
+  "name": "udp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DVPitakov/UDP"
+  },
+  "engines": {
+    "node": "^6.3.1"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "ws": "^1.1.1",
+    "dgram": "^1.0.0"
+  }
+}
