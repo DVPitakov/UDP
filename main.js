@@ -8,6 +8,7 @@ server.on('listening', function () {
     var address = server.address();
     console.log('UDP Server listening on ' + address.address + ":" + address.port);
 });
+console.log('hello');
 server.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
     if (buf[0] != null && buf[1] != null) {
@@ -24,3 +25,4 @@ server.on('message', function (message, remote) {
     }
     
 });
+server.bind(PORT, HOST);
