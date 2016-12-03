@@ -1,6 +1,6 @@
 var dgram = require('dgram');
-var PORT = process.env.PORT || 8081;
-var HOST = 'projectudp.herokuapp.com';
+var PORT = 443;
+var HOST = '54.197.246.21';
 var server = dgram.createSocket('udp4');
 
 server.on('listening', function () {
@@ -12,15 +12,4 @@ console.log('hello');
 server.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
 });
-
 server.bind(3000, '127.0.0.1');
-
-setTimeout(()=>{
-	console.log('sended');
-	server.send("hello_1", PORT, HOST);
-},2000);
-
-setTimeout(()=>{
-	console.log('sended');
-	server.send("hello_2", PORT, HOST);
-},4000);

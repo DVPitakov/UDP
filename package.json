@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "ws": "^1.1.1",
-    "dgram": "^1.0.0"
+    "dgram": "^3.0.0"
   }
 }
