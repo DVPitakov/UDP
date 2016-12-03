@@ -1,6 +1,6 @@
 var dgram = require('dgram');
 var PORT = process.env.PORT || 8081;
-var HOST = '127.0.0.1' || 'projectudp.herokuapp.com';
+var HOST = 'projectudp.herokuapp.com';
 var server = dgram.createSocket('udp4');
 
 server.on('listening', function () {

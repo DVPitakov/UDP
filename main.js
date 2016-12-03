@@ -1,6 +1,6 @@
 var dgram = require('dgram');
 var PORT = process.env.PORT || 8081;
-var HOST = '127.0.0.1';
+var HOST =  process.env.HOST ||  process.env.ADDRESS || '127.0.0.1';
 var buf = [null, null];
 
 var server = dgram.createSocket('udp4');
